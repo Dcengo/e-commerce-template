@@ -140,7 +140,7 @@ time, mark, audio, video {
     display: none;
 }
 .carousel__slide {
-    min-width: 44%;
+    min-width: 42%;
 }
 
 .card__inner {
