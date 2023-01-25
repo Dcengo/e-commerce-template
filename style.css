@@ -376,10 +376,3 @@ cursor: pointer;
         display: flex;
     }
 }
-
-@media screen and (min-width: 1620px) {
-    .carousel__slide {
-        min-width: 48%;
-    }
-
-}
