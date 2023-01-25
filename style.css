@@ -1,0 +1,385 @@
+/*Reset CSS*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Avenir' !important;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir.ttc') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardePro';
+    src: url('fonts/ITCAvantGardePro-Bk.otf') format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardePro';
+    src: url('fonts/ITCAvantGardePro-Md.otf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardePro';
+    src: url('fonts/ITCAvantGardePro-Demi.otf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardePro';
+    src: url('fonts/ITCAvantGardePro-Bold.otf') format('truetype');
+    font-weight: bold;
+}
+
+/*Styles*/
+.main{
+    display: flex;
+}
+
+.main .img-box{
+    width: 50%;
+    height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main .img-box .mobile-bg{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.65%);
+    opacity: 0.5;
+    height: 50%;
+    width: 100%;
+}
+
+.main .right{
+    width: 50%;
+}
+
+.main .right .top{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 168px 0 111px;
+}
+
+.main .right .top .title{
+    font-family: ITCAvantGardePro !important;
+    font-weight: bold;
+    font-size: 30px;
+    ine-height: 40px;
+}
+
+.main .right .top .info__text{
+    font-size: 16px;
+    margin: 22px 0 27px 0;
+    color: #666666;
+    line-height: 27px;
+}
+
+.main .right .top .btn{
+    background: transparent;
+    outline: unset !important;
+    border: unset;
+    display: flex;
+    border-bottom: 1px solid;
+    width: fit-content;
+    text-align: left;
+    padding: 0px 7px 5px 0;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.carousel__wrapper {
+    padding: 39px 0 12px 95px;
+}
+.carousel__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.carousel__container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+.carousel__container::-webkit-scrollbar {
+    display: none;
+}
+.carousel__slide {
+    min-width: 44%;
+}
+
+.card__inner {
+    margin: 15px;
+    background-color: #fff;
+   /* margin: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 306px;*/
+}
+.card__inner h4 {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.card__inner .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.card__inner .price h5{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.card__inner .price .colors{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 28%;
+    min-width: 58px;
+}
+
+.card__inner .price .colors .color__btn{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card__inner .price .colors .color__btn.active{
+    border: 1px solid #000000;
+    padding: 2px;
+    background-clip: content-box !important;
+    width: 6px;
+    height: 6px;
+}
+
+.card__inner .price .colors .color__btn span{
+width: 12px;
+height: 12px;
+border-radius: 50%;
+}
+
+.card__inner .price .colors .color__btn.active span{
+width: 10px;
+height: 10px;
+}
+.card__image img {
+width: 100%;
+}
+.arrow {
+display: none;
+position: absolute;
+width: 30px;
+height: 30px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+top: 50%;
+right: 0;
+transform: translate(-80%, -100%);
+padding: 5px;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+/*Desktops, large screens*/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .main .right .top {
+        padding: 79px 34px 0 63px;
+    }
+
+    .carousel__wrapper {
+        padding: 39px 0 12px 49px;
+    }
+}
+
+/*Small screens, laptops*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .main .right .top {
+        padding: 84px 39px 0 54px;
+    }
+    .carousel__wrapper {
+        padding: 22px 0 12px 42px;
+    }
+    .card__inner .price .colors {
+        width: 36%;
+    }
+
+    .main .right .top .title {
+        font-size: 28px;
+    }
+
+    .main .right .top .info__text {
+        font-size: 15px;
+        margin: 17px 0 19px 0;
+        line-height: 25px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .main .right .top {
+        padding: 58px 18px 0 24px;
+    }
+
+    .main .right .top .title {
+        font-size: 23px;
+    }
+
+    .main .right .top .info__text {
+        font-size: 14px;
+        margin: 14px 0 16px 0;
+        line-height: 20px;
+    }
+
+    .main .right .top .btn {
+        font-size: 11px;
+    }
+
+    .main .right {
+        width: 56%;
+    }
+
+    .carousel__wrapper {
+        padding: 32px 0px 12px 8px;
+    }
+
+    .card__inner .price .colors {
+        width: 54%;
+        max-width: 59px;
+    }
+
+    .card__inner h4 {
+        font-size: 11px;
+        margin-top: 7px;
+    }
+
+    .card__inner .price h5 {
+        font-size: 11px;
+    }
+
+    .carousel__slide {
+        min-width: 49%;
+    }
+}
+
+/*iPads, Tablets*/
+@media screen and (min-width: 320px)  and (max-width: 480px){
+    .main {
+        flex-direction: column;
+    }
+
+    .main .img-box {
+        width: 100%;
+        height: 65vh;
+        z-index: -1;
+    }
+
+    .main .right {
+        width: 100%;
+        margin-top: -185px;
+    }
+
+    .card__inner {
+        margin: 0 6px;
+    }
+
+    .main .right .top {
+        padding: 0px 25px 0 25px;
+    }
+
+    .main .right .top .title {
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        line-height: 26px;
+
+    }
+
+    .main .right .top .info__text {
+        display: none;
+    }
+    .carousel__wrapper {
+        padding: 33px 0 12px 15px;
+    }
+
+    .main .right .top .btn {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        margin-top: 21px;
+    }
+
+    .carousel__container {
+        align-items: flex-start;
+    }
+
+    .card__inner h4 {
+        min-height: 36px;
+    }
+
+    .main .img-box .mobile-bg{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .card__inner h4 {
+        height: 36px;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .carousel__slide {
+        scroll-snap-align: center;
+        position: relative;
+    }
+    .arrow {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    .carousel__slide {
+        min-width: 48%;
+    }
+
+}
